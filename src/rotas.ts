@@ -1,5 +1,9 @@
-import { Router } from "express";
+import { Request, Response, Router } from "express";
 
 const rotas = Router();
+
+rotas.get('/', (req: Request, res: Response) => {
+    return res.status(201).json({mensagem: "API de vendas de ingressos"})
+})
 
 export default rotas;
